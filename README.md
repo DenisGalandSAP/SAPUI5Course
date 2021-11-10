@@ -5,7 +5,7 @@
 | **Generation Date and Time**<br>Tue Mar 30 2021 14:13:34 GMT+0000 (Coordinated Universal Time) |
 | **App Generator**<br>@sap/generator-fiori                                                      |
 | **App Generator Version**<br>1.1.6                                                             |
-| **Generation Platform**<br>SAP Business Application Studio                                     |
+| **Generation Platform**<br>Visual Studio Code                                                  |
 | **Floorplan Used**<br>simple                                                                   |
 | **Service Type**<br>None                                                                       |
 
@@ -19,7 +19,7 @@
 
 ## trainingproject
 
-A Fiori application.
+This is an application that I give as an exercise for juniors and beginners in order to teach the best pratices for UI5 development
 
 ### Starting the generated app
 
