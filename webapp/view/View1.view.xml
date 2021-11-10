@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    controllerName="z.trainingproject.controller.View1"
+    displayBlock="true">
+    <Page id="page2"
+        title="{i18n>title}">
+        <headerContent>
+            <SearchField value="{/filterValue}"
+                placeholder="Filter for list"
+                liveChange=".onLiveChange(${$parameters>/newValue})"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar >
+                <core:Fragment fragmentName="z.trainingproject.view.HBox"
+                    type="XML"/>
+            </OverflowToolbar>
+        </subHeader>
+        <content>
+            <List id="list0"
+                items="{path : 'products>/',
+                            sorter:{path:'name',descending:true,group:true}}">
+                <items>
+                    <ObjectListItem title="{products>name}"
+                        type="Navigation"
+                        number="{products>price}"
+                        press=".onNavigate">
+                        <firstStatus>
+                            <ObjectStatus text="{=${products>stock} > 0 ? 'In stock' : 'Out of Stock' }"
+                                state="{path: 'products>stock',
+						                    formatter: '.onStockCheck'
+					                    }" />
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar >
+                <ToolbarSpacer/>
+                <Button text="openDialog"
+                    type="Emphasized"
+                    press="onOpenDialog"/>
+            </OverflowToolbar>
+        </footer>
+
+    </Page>
+</mvc:View>
